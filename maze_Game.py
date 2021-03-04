@@ -103,7 +103,7 @@ def findSpacecraft():
                 spacecraft.append(num2)
                 spacecraft.append(num1)
     if Up:
-        if array[spacecraft[1]-1][spacecraft[0]] == 0 or array[spacecraft[1]-1][spacecraft[0]] == 4:
+        if array[spacecraft[1]-1][spacecraft[0]] == 0 or array[spacecraft[1]-1][spacecraft[0]] == 7:
             winsound .PlaySound("E:\\SomPhors_VC1_Algorithm\\Sounds\\coin2.wav", winsound.SND_FILENAME)
             point += 5
             array[spacecraft[1]-1][spacecraft[0]] = 2
@@ -112,11 +112,10 @@ def findSpacecraft():
             lift()
         elif array[spacecraft[1]-1][spacecraft[0]] == 3:
             win = True
-
-
         Up = False
+
     elif Down:
-        if array[spacecraft[1]+1][spacecraft[0]] == 0 or array[spacecraft[1]+1][spacecraft[0]] == 4:
+        if array[spacecraft[1]+1][spacecraft[0]] == 0 or array[spacecraft[1]+1][spacecraft[0]] == 7:
             winsound .PlaySound("E:\\SomPhors_VC1_Algorithm\\Sounds\\coin2.wav", winsound.SND_FILENAME)
             point += 5
             array[spacecraft[1]+1][spacecraft[0]] = 2
@@ -125,10 +124,10 @@ def findSpacecraft():
             lift()
         elif array[spacecraft[1]+1][spacecraft[0]] == 3:
             win = True
-
         Down = False
+
     elif Right:
-        if array[spacecraft[1]][spacecraft[0]+1] == 0 or  array[spacecraft[1]][spacecraft[0]+1] == 4:
+        if array[spacecraft[1]][spacecraft[0]+1] == 0 or  array[spacecraft[1]][spacecraft[0]+1] == 7:
             winsound .PlaySound("E:\\SomPhors_VC1_Algorithm\\Sounds\\coin2.wav", winsound.SND_FILENAME)
             point += 5
             array[spacecraft[1]][spacecraft[0]+1] = 2
@@ -138,8 +137,9 @@ def findSpacecraft():
         elif array[spacecraft[1]][spacecraft[0]+1] == 3:
             win = True
         Right = False
+
     elif Left:
-        if array[spacecraft[1]][spacecraft[0]-1] == 0 or array[spacecraft[1]][spacecraft[0]-1] == 0:
+        if array[spacecraft[1]][spacecraft[0]-1] == 0 or array[spacecraft[1]][spacecraft[0]-1] == 7:
             winsound .PlaySound("E:\\SomPhors_VC1_Algorithm\\Sounds\\coin2.wav", winsound.SND_FILENAME)
             point += 5
             array[spacecraft[1]][spacecraft[0]-1] = 2
@@ -403,8 +403,6 @@ coin3 = PhotoImage(file = "E:\\SomPhors_VC1_Algorithm\\images\\gold_3.png")
 
 wall = PhotoImage(file = "E:\\SomPhors_VC1_Algorithm\\images\\stoneCenter.png") 
 over = PhotoImage(file = "E:\\SomPhors_VC1_Algorithm\\images\\over.gif") 
-
-
 
 
 begin()
